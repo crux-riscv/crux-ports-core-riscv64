@@ -1,0 +1,6 @@
+untrusted comment: verify with /etc/ports/core-riscv64.pub
+RWSZ4iFjxPszObOwXWj8CeDgcFOuoJTn1lNpUK5xEMhveM42S1Pi4UW5T9sZfvXqe/rkPbTDX+Rofp286UG7tPccg7XFE5NvIwM=
+SHA256 (Pkgfile) = fab2fbf5c081a5849b96edafebeb8570955535aaacf3676056c567db3b25ce37
+SHA256 (.footprint) = 6659c6a03dec101d2ee1d2712c80e6d5d387a1879dd4a06f71ac6ada00258c45
+SHA256 (gmp-6.3.0.tar.xz) = a3c2b80201b89e68616f4ad30bc66aee4927c3ce50e33929ca819d5c43538898
+SHA256 (gmp.h) = a3e9bb19d3066cfb10740dbb5bcd1c2552402770284dc570db42dd958465099a
