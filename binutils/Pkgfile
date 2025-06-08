@@ -4,7 +4,7 @@
 # Depends on: flex zlib
 
 name=binutils
-version=2.39
+version=2.43.1
 release=1
 source=(https://ftpmirror.gnu.org/gnu/$name/$name-$version.tar.xz)
 
@@ -13,6 +13,7 @@ build() {
 	cd build
 
 	../$name-$version/configure --prefix=/usr \
+		--build=riscv64-unknown-linux-gnu \
 		--enable-shared \
 		--enable-64-bit-bfd \
 		--enable-default-execstack=no \

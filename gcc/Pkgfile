@@ -4,8 +4,8 @@
 # Depends on: libmpc zlib zstd
 
 name=gcc
-version=12.3.0
-release=2
+version=14.3.0
+release=1
 source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.xz
 	$name-nocheck-fixincludes.patch $name-4.7.3-multilib-dirs.patch
 	fix-nested-generic-lambda.patch rejectnegative.patch)
@@ -13,7 +13,7 @@ source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.
 build() {
 	patch -d $name-$version -p1 -i $SRC/$name-nocheck-fixincludes.patch
 	#patch -d $name-$version -p1 -i $SRC/$name-4.7.3-multilib-dirs.patch
-	patch -d $name-$version -p1 -i $SRC/fix-nested-generic-lambda.patch
+#	patch -d $name-$version -p1 -i $SRC/fix-nested-generic-lambda.patch
 	#patch -d $name-$version -p1 -i $SRC/rejectnegative.patch
 
 	# pipe fails tests
@@ -39,21 +39,30 @@ build() {
 		--with-pkgversion="CRUX-RISCV64" \
 		--with-system-zlib \
 		--disable-nls
-	make bootstrap
-	make -j1 DESTDIR=$PKG install
+	make -O STAGE1_CFLAGS="-O2" \
+        	BOOT_CFLAGS="$CFLAGS" \
+        	BOOT_LDFLAGS="$LDFLAGS" \
+        	LDFLAGS_FOR_TARGET="$LDFLAGS" \
+        	bootstrap
+    	make -j1 DESTDIR=$PKG install
 
 	install -d $PKG/lib
 	ln -sf ../usr/bin/cpp $PKG/lib/cpp
 	ln -sf gcc $PKG/usr/bin/cc
 	ln -sf g++ $PKG/usr/bin/c++
 
-	mv $PKG/usr/lib/gcc/*/$version/include-fixed/{limits.h,syslimits.h} $PKG/usr/lib/gcc/*/$version/include/
 	rm -r $PKG/usr/share/{info,$name-$version}
 	rm -r $PKG/usr/bin/*-linux-gnu-*
 	rm -r $PKG/usr/lib/gcc/*/$version/{install-tools,include-fixed}
 
-	install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/lib/
-	mv $PKG/usr/lib/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/lib/
+	for D in lib; do
+        	install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/${D}
+        	mv $PKG/usr/${D}/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/${D}
+    	done
+
+	mkdir $PKG/usr/lib/bfd-plugins
+	ln -sfv ../../lib/gcc/$($PKG/usr/bin/gcc -dumpmachine)/{$version}/liblto_plugin.so \
+		$PKG/usr/lib/bfd-plugins/
 
 	sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/{libstdc++.la,libsupc++.la}
 }
