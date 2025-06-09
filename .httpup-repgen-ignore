@@ -1,0 +1,7 @@
+README.md
+\.git*
+^core\-riscv64\.httpup
+*~
+\.*~
+*work
+.\pkg\.
