@@ -1,0 +1,26 @@
+# Description: CRUX ports system tools
+# URL: https://crux.nu
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: CRUX-ARM System Team, devel at crux-riscv dot nu
+# Depends on:
+
+name=ports
+version=1.6
+release=4
+
+source=(https://crux.nu/files/tools/ports/$name-$version.tar.gz
+  core.pub opt.pub xorg.pub contrib.pub \
+  core.rsync opt.rsync xorg.rsync contrib.rsync.inactive \
+  core-riscv64.rsync \
+  opt-riscv64.httpup opt-riscv64.pub \
+  xorg-riscv64.httpup xorg-riscv64.pub)
+
+build () {
+  cd $name-$version
+
+  make
+  make DESTDIR=$PKG MANDIR=/usr/share/man install
+
+  mkdir -p $PKG/etc/ports
+  install -m 0644 $SRC/*.{httpup,pub,rsync,inactive} $PKG/etc/ports
+}

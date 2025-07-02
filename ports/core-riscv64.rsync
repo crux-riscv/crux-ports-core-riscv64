@@ -1,0 +1,3 @@
+host=crux.nu
+collection=ports/crux-riscv64-3.8/core-riscv64/
+destination=/usr/ports/core-riscv64
