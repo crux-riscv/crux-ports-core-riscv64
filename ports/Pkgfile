@@ -11,7 +11,7 @@ release=4
 source=(https://crux.nu/files/tools/ports/$name-$version.tar.gz
   core.pub opt.pub xorg.pub contrib.pub \
   core.rsync opt.rsync xorg.rsync contrib.rsync.inactive \
-  core-riscv64.rsync \
+  core-riscv64.rsync core-riscv64.pub \
   opt-riscv64.httpup opt-riscv64.pub \
   xorg-riscv64.httpup xorg-riscv64.pub)
 
