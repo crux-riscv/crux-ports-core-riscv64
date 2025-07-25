@@ -3,6 +3,6 @@
 #
 
 ROOT_DIR=/usr/ports/xorg-riscv64
-URL=https://raw.githubusercontent.com/crux-arm/crux-ports-xorg-riscv64/3.8/
+URL=https://raw.githubusercontent.com/crux-riscv/crux-ports-xorg-riscv64/3.8/
 
 # End of file
