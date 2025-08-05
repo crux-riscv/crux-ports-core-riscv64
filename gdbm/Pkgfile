@@ -4,20 +4,20 @@
 # Depends on: readline
 
 name=gdbm
-version=1.25
+version=1.26
 release=1
 source=(https://ftpmirror.gnu.org/gnu/$name/$name-$version.tar.gz)
 
 build() {
-	cd $name-$version
+  	cd $name-$version
 
-	./configure \
-		--prefix=/usr \
-		--enable-libgdbm-compat \
-		--disable-nls \
-		--build=riscv64-unknown-linux-gnu
-	make
-	make DESTDIR=$PKG install
+  	./configure \
+  		--prefix=/usr \
+  		--enable-libgdbm-compat \
+  		--disable-nls \
+  		--build=riscv64-unknown-linux-gnu
+  	make
+  	make DESTDIR=$PKG install
 
-	rm -r $PKG/usr/share/info
+  	rm -r $PKG/usr/share/info
 }
