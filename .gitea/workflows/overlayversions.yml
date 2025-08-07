@@ -22,7 +22,7 @@ jobs:
           cd /etc/ports
           for i in *.inactive; do mv $i ${i/.inactive/}; done
           echo host=crux.nu > /etc/ports/core-riscv64.rsync
-          echo collection=crux-riscv64/core-riscv64/3.8/ >> /etc/ports/core-riscv64.rsync
+          echo collection=crux-riscv/core-riscv64/3.8/ >> /etc/ports/core-riscv64.rsync
           echo destination=/usr/ports/core-riscv64 >> /etc/ports/core-riscv64.rsync
           ports -u
 
@@ -33,7 +33,7 @@ jobs:
         env:
           GITEA_TOKEN: ${{ secrets.CRUXBOT_TOKEN }}
           GITEA_URL: 'https://git.crux.nu'
-          GITEA_OWNER: crux-riscv64
+          GITEA_OWNER: crux-riscv
           GITEA_REPO: core-riscv64
         run: |
           bash -x ${{ github.workspace }}/.gitea/scripts/overlay_versions.sh /usr/ports/core-riscv64 core
