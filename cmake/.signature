@@ -1,5 +1,0 @@
-untrusted comment: verify with /etc/ports/core-riscv64.pub
-RWSZ4iFjxPszObIybdyGLmppAt4dqqQMAEZ8hcU1iQjP1FTAYPlP48qvhD3H0+l/ytAzXLnvd9Bi2gS1NocPX/5Z0XnhoREF7AM=
-SHA256 (Pkgfile) = 006ab27f1af49b116b6e8b99361049e18c5166271b80acb17b819cb0755eb79a
-SHA256 (.footprint) = 03463f437e6b2997630887dbdaa1a09b38fb4d55487d95d1ab3049920de26371
-SHA256 (cmake-3.31.8.tar.gz) = e3cde3ca83dc2d3212105326b8f1b565116be808394384007e7ef1c253af6caa
