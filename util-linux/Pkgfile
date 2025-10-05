@@ -21,6 +21,7 @@ build() {
         --libdir=/lib \
         --buildtype=plain \
         --wrap-mode=nodownload \
+        --default-library=both \
         -D b_lto=false \
         -D b_pie=true \
         -D nls=disabled \

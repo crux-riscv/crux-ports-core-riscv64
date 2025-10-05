@@ -146,10 +146,13 @@ drwxr-xr-x	root/root	usr/lib/
 lrwxrwxrwx	root/root	usr/lib/libblkid.so -> ../../lib/libblkid.so.1
 -rw-r--r--	root/root	usr/lib/libfdisk.a
 lrwxrwxrwx	root/root	usr/lib/libfdisk.so -> ../../lib/libfdisk.so.1
+-rw-r--r--	root/root	usr/lib/liblastlog2.a
 lrwxrwxrwx	root/root	usr/lib/liblastlog2.so -> ../../lib/liblastlog2.so.2
+-rw-r--r--	root/root	usr/lib/libmount.a
 lrwxrwxrwx	root/root	usr/lib/libmount.so -> ../../lib/libmount.so.1
 -rw-r--r--	root/root	usr/lib/libsmartcols.a
 lrwxrwxrwx	root/root	usr/lib/libsmartcols.so -> ../../lib/libsmartcols.so.1
+-rw-r--r--	root/root	usr/lib/libuuid.a
 lrwxrwxrwx	root/root	usr/lib/libuuid.so -> ../../lib/libuuid.so.1
 drwxr-xr-x	root/root	usr/lib/pkgconfig/
 -rw-r--r--	root/root	usr/lib/pkgconfig/blkid.pc
