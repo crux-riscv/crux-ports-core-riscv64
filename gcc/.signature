@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/core-riscv64.pub
-RWSZ4iFjxPszOQLnX7cM4rDD9mevkEz0FyqlSimSCdIciHj6Ij+hO47ofZxF1pFJ7RdT9s631gxvQ1YtBmWhbViXvj71hZ8lnAc=
-SHA256 (Pkgfile) = 9054b775f7e7e21cbdfca112085b7a42b72cbc399b090e57b783052686fab8a3
+RWSZ4iFjxPszOa3YVg9mT0OWr8rja6k75idxMTewqGZPHRcpB01yGXsDo3JbuGNjTjKFj7bPOlaKp+hQJXsXKgADZ8+T7mQq0Qc=
+SHA256 (Pkgfile) = b8fc08c8c18801f5d9f6341b476622e1416ef281a63e9678ec48d631c6187aa2
 SHA256 (.footprint) = 89384a8403bbf4685fdeb1a3cdf36397a0a4d6dacbece1ea7b1718563ef27942
 SHA256 (gcc-14.3.0.tar.xz) = e0dc77297625631ac8e50fa92fffefe899a4eb702592da5c32ef04e2293aca3a
 SHA256 (gcc-nocheck-fixincludes.patch) = 850a71d2c64b9f2bec31821bd972bf89c2d57764faf64948100eaf474fd63bbb

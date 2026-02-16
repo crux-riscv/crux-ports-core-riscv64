@@ -36,7 +36,7 @@ build() {
 		--enable-plugin \
 		--enable-default-pie \
 		--enable-default-ssp \
-		--with-pkgversion="CRUX-RISCV64" \
+		--with-pkgversion="CRUX-RISCV riscv64" \
 		--with-system-zlib \
 		--disable-nls
 	make -O STAGE1_CFLAGS="-O2" \

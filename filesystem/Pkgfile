@@ -79,10 +79,10 @@ EOF
 
     # /etc/os-release
     cat > $PKG/etc/os-release << EOF
-NAME=CRUX-RiscV64
+NAME=CRUX-RISCV64
 VERSION_ID="$version"
 ID=crux
-PRETTY_NAME="CRUX-RiscV64"
+PRETTY_NAME="CRUX-RISCV riscv64"
 HOME_URL="https://git.crux.nu/crux-riscv64"
 DOCUMENTATION_URL="https://git.crux.nu/crux-riscv64"
 BUG_REPORT_URL="https://git.crux.nu/crux-riscv64"
