@@ -41,11 +41,11 @@ build() {
         --with-system-zlib \
         --disable-nls
     make -O STAGE1_CFLAGS="-O2" \
-            BOOT_CFLAGS="$CFLAGS" \
-            BOOT_LDFLAGS="$LDFLAGS" \
-            LDFLAGS_FOR_TARGET="$LDFLAGS" \
-            bootstrap
-        make -j1 DESTDIR=$PKG install
+        BOOT_CFLAGS="$CFLAGS" \
+        BOOT_LDFLAGS="$LDFLAGS" \
+        LDFLAGS_FOR_TARGET="$LDFLAGS" \
+        bootstrap
+    make -j1 DESTDIR=$PKG install
 
     install -d $PKG/lib
     ln -sf ../usr/bin/cpp $PKG/lib/cpp
@@ -57,9 +57,9 @@ build() {
     rm -r $PKG/usr/lib/gcc/*/$version/{install-tools,include-fixed}
 
     for D in lib; do
-            install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/${D}
-            mv $PKG/usr/${D}/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/${D}
-        done
+        install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/${D}
+        mv $PKG/usr/${D}/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/${D}
+    done
 
     mkdir $PKG/usr/lib/bfd-plugins
     ln -sfv ../../lib/gcc/$($PKG/usr/bin/gcc -dumpmachine)/{$version}/liblto_plugin.so \
