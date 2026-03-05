@@ -1,25 +1,26 @@
 # Description: Free library for arbitrary precision arithmetic
 # URL: https://gmplib.org/
-# Maintainer: CRUX RISC-V, crux-riscv at crux dot nu
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: CRUX-RISCV System Team, devel at crux-riscv dot nu
 
 name=libgmp
 version=6.3.0
 release=1
 source=(https://gmplib.org/download/gmp/gmp-$version.tar.xz
-	gmp.h)
+    gmp.h)
 
 build() {
-	cd gmp-$version
+    cd gmp-$version
 
-	./configure \
-		--prefix=/usr \
-		--enable-cxx \
-		--build=riscv64-unknown-linux-gnu
-	make
-	make DESTDIR=$PKG install
+    ./configure \
+        --prefix=/usr \
+        --enable-cxx \
+        --build=riscv64-unknown-linux-gnu
+    make
+    make DESTDIR=$PKG install
 
-	mv $PKG/usr/include/gmp{,-64}.h
-	install -m 0644 $SRC/gmp.h $PKG/usr/include/
+    mv $PKG/usr/include/gmp{,-64}.h
+    install -m 0644 $SRC/gmp.h $PKG/usr/include/
 
-	rm -r $PKG/usr/share
+    rm -r $PKG/usr/share
 }

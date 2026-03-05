@@ -1,68 +1,69 @@
 # Description: The GNU Compiler Collection
 # URL: https://gcc.gnu.org
-# Maintainer: CRUX RISC-V, crux-riscv at crux dot nu
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: CRUX-RISCV System Team, devel at crux-riscv dot nu
 # Depends on: libmpc zlib zstd
 
 name=gcc
 version=14.3.0
 release=1
 source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.xz
-	$name-nocheck-fixincludes.patch $name-4.7.3-multilib-dirs.patch
-	fix-nested-generic-lambda.patch rejectnegative.patch)
+    $name-nocheck-fixincludes.patch $name-4.7.3-multilib-dirs.patch
+    fix-nested-generic-lambda.patch rejectnegative.patch)
 
 build() {
-	patch -d $name-$version -p1 -i $SRC/$name-nocheck-fixincludes.patch
-	#patch -d $name-$version -p1 -i $SRC/$name-4.7.3-multilib-dirs.patch
-#	patch -d $name-$version -p1 -i $SRC/fix-nested-generic-lambda.patch
-	#patch -d $name-$version -p1 -i $SRC/rejectnegative.patch
+    patch -d $name-$version -p1 -i $SRC/$name-nocheck-fixincludes.patch
+    #patch -d $name-$version -p1 -i $SRC/$name-4.7.3-multilib-dirs.patch
+    #patch -d $name-$version -p1 -i $SRC/fix-nested-generic-lambda.patch
+    #patch -d $name-$version -p1 -i $SRC/rejectnegative.patch
 
-	# pipe fails tests
-	CFLAGS=${CFLAGS/-pipe/}
-	CXXFLAGS=${CXXFLAGS/-pipe/}
+    # pipe fails tests
+    CFLAGS=${CFLAGS/-pipe/}
+    CXXFLAGS=${CXXFLAGS/-pipe/}
 
-	mkdir build
-	cd build
-	../$name-$version/configure \
-		--prefix=/usr \
-		--libexecdir=/usr/lib \
-		--enable-languages=c,c++,lto \
-		--enable-threads=posix \
-		--enable-__cxa_atexit \
-		--enable-clocale=gnu \
-		--enable-shared \
-		--enable-lto \
-		--with-x=no \
-		--disable-multilib \
-		--enable-plugin \
-		--enable-default-pie \
-		--enable-default-ssp \
-		--with-pkgversion="CRUX-RISCV riscv64" \
-		--with-system-zlib \
-		--disable-nls
-	make -O STAGE1_CFLAGS="-O2" \
-        	BOOT_CFLAGS="$CFLAGS" \
-        	BOOT_LDFLAGS="$LDFLAGS" \
-        	LDFLAGS_FOR_TARGET="$LDFLAGS" \
-        	bootstrap
-    	make -j1 DESTDIR=$PKG install
+    mkdir build
+    cd build
+    ../$name-$version/configure \
+        --prefix=/usr \
+        --libexecdir=/usr/lib \
+        --enable-languages=c,c++,lto \
+        --enable-threads=posix \
+        --enable-__cxa_atexit \
+        --enable-clocale=gnu \
+        --enable-shared \
+        --enable-lto \
+        --with-x=no \
+        --disable-multilib \
+        --enable-plugin \
+        --enable-default-pie \
+        --enable-default-ssp \
+        --with-pkgversion="CRUX-RISCV riscv64" \
+        --with-system-zlib \
+        --disable-nls
+    make -O STAGE1_CFLAGS="-O2" \
+            BOOT_CFLAGS="$CFLAGS" \
+            BOOT_LDFLAGS="$LDFLAGS" \
+            LDFLAGS_FOR_TARGET="$LDFLAGS" \
+            bootstrap
+        make -j1 DESTDIR=$PKG install
 
-	install -d $PKG/lib
-	ln -sf ../usr/bin/cpp $PKG/lib/cpp
-	ln -sf gcc $PKG/usr/bin/cc
-	ln -sf g++ $PKG/usr/bin/c++
+    install -d $PKG/lib
+    ln -sf ../usr/bin/cpp $PKG/lib/cpp
+    ln -sf gcc $PKG/usr/bin/cc
+    ln -sf g++ $PKG/usr/bin/c++
 
-	rm -r $PKG/usr/share/{info,$name-$version}
-	rm -r $PKG/usr/bin/*-linux-gnu-*
-	rm -r $PKG/usr/lib/gcc/*/$version/{install-tools,include-fixed}
+    rm -r $PKG/usr/share/{info,$name-$version}
+    rm -r $PKG/usr/bin/*-linux-gnu-*
+    rm -r $PKG/usr/lib/gcc/*/$version/{install-tools,include-fixed}
 
-	for D in lib; do
-        	install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/${D}
-        	mv $PKG/usr/${D}/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/${D}
-    	done
+    for D in lib; do
+            install -d -m 0755 $PKG/usr/share/gdb/auto-load/usr/${D}
+            mv $PKG/usr/${D}/libstdc++.so.*-gdb.py $PKG/usr/share/gdb/auto-load/usr/${D}
+        done
 
-	mkdir $PKG/usr/lib/bfd-plugins
-	ln -sfv ../../lib/gcc/$($PKG/usr/bin/gcc -dumpmachine)/{$version}/liblto_plugin.so \
-		$PKG/usr/lib/bfd-plugins/
+    mkdir $PKG/usr/lib/bfd-plugins
+    ln -sfv ../../lib/gcc/$($PKG/usr/bin/gcc -dumpmachine)/{$version}/liblto_plugin.so \
+        $PKG/usr/lib/bfd-plugins/
 
-	sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/{libstdc++.la,libsupc++.la}
+    sed -i "s|-L$SRC[^ ]* ||g" $PKG/usr/lib/{libstdc++.la,libsupc++.la}
 }

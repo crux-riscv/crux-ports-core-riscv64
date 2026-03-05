@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/core-riscv64.pub
-RWSZ4iFjxPszOcVX5hGNk8XUFc7sn3JYksDWzaQ+FjRyl2/8uxgTrueCSkPyMDaYxJnnE9GcgaI/iXLJu3JO9F65YVTmwPKBmwM=
-SHA256 (Pkgfile) = f2679ff28784108e22a0e4fc4bf7d284485d85698e3f360e5405899c9a8d80a8
+RWSZ4iFjxPszOVW6qKW/0G82mr3uU8ZKl3z1NvfvM/zgrRGABB64sbUBxeIJe/JTO0kV1snt0Zcdh6DbOp14a6YXbY3tJV8ZDA4=
+SHA256 (Pkgfile) = 47bf35fcf3e1a01cab1251dc53f89799007c89f1b9b52d37eec0732a8d01d81d
 SHA256 (.footprint) = bba6afc106f6bb2d4b38c82dd83599abd594b6683feaa1d220d5bf9b6c3f726f
 SHA256 (mlocate-0.26.tar.xz) = 3063df79fe198fb9618e180c54baf3105b33d88fe602ff2d8570aaf944f1263e
 SHA256 (mlocate) = def6b64ba85946c724192e282459b12ebcbd37fc4fd19cab7493b5bb25a86885

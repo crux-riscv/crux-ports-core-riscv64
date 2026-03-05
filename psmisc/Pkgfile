@@ -1,6 +1,7 @@
 # Description: Small utilities that use the /proc filesystem
 # URL: https://gitlab.com/psmisc/psmisc
-# Maintainer: CRUX RISC-V, crux-riscv at crux dot nu
+# Maintainer: CRUX System Team, core-ports at crux dot nu
+# Arch Maintainer: CRUX-RISCV System Team, devel at crux-riscv dot nu
 # Depends on: ncurses
 
 name=psmisc
@@ -9,10 +10,10 @@ release=1
 source=(http://downloads.sourceforge.net/project/$name/$name/$name-$version.tar.xz)
 
 build() {
-	cd $name-$version
-	export LINGUAS=' '
-	./configure --prefix=/usr --disable-nls
-	make
-	make DESTDIR=$PKG install
-	rm $PKG/usr/bin/pstree.x11
+    cd $name-$version
+    export LINGUAS=' '
+    ./configure --prefix=/usr --disable-nls
+    make
+    make DESTDIR=$PKG install
+    rm $PKG/usr/bin/pstree.x11
 }
