@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/core-riscv64.pub
-RWSZ4iFjxPszOQh4f67wvjsA4ybeKDbUp5kFuBQ3z8HfD6ZXE7DqoFRQDAx5EbnxrOhmP8dOzGhOIYXhFbe0gooyyvfgYDqdzgc=
-SHA256 (Pkgfile) = 52d8f159a65e3889b91d1a4584fc21860fffe1af33e27ebc14563b27e9a78f4a
+RWSZ4iFjxPszORQuLpc9a4bYsFf9X2SaPQhpClNurfpAjx+n+yWQl9V2VtSnS4NEDkWhmVchBikn4ZdqJiXsKxb25SjTR1dJnws=
+SHA256 (Pkgfile) = 24d227bf0859a6ae5f0baba3acd2028f1108b5670533d20b5197e7bd46c73693
 SHA256 (.footprint) = 7d143f18f63bba5569d729eefd0d0f04ae4b0539f8bd71f9cfd6955b9e7c639d
-SHA256 (pkgutils-5.40.11.tar.xz) = 926f98704e72d9dbfae156f60ea26d97a1c7d703a36f3db2f57e553b2bdfacb6
+SHA256 (pkgutils-5.40.12.tar.xz) = 31179aba0c4dc223db77b8a5808b6165f5bd66b946436cedd6aa296cf7392006
 SHA256 (pkgmk.conf) = 9dc75b71355941be10b9560f21d8ced577748597df2b7b92de45e9f67f9af308
