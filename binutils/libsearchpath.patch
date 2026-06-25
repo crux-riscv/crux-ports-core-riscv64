@@ -1,0 +1,41 @@
+# On CRUX, lib64 -> lib resulting in duplicate directories being
+# added to the SEARCH_DIR of the default (elf_x86_64) linker script. 
+#
+# can be checked with ld --verbose | sed -n '/SEARCH_DIR/{s/; /\n/g;p}'
+#
+# before patch:
+#   SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib64")
+#   SEARCH_DIR("/usr/local/lib64")
+#   SEARCH_DIR("/lib64")
+#   SEARCH_DIR("/usr/lib64")
+#   SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")
+#   SEARCH_DIR("/usr/local/lib")
+#   SEARCH_DIR("/lib")
+#   SEARCH_DIR("/usr/lib");
+#
+# after patch:
+#   SEARCH_DIR("/usr/x86_64-pc-linux-gnu/lib")
+#   SEARCH_DIR("/usr/local/lib")
+#   SEARCH_DIR("/lib")
+#   SEARCH_DIR("/usr/lib");
+
+diff -Naur binutils-2.46.0.orig/ld/emulparams/elf_x86_64.sh binutils-2.46.0/ld/emulparams/elf_x86_64.sh
+--- binutils-2.46.0.orig/ld/emulparams/elf_x86_64.sh2026-06-06 21:11:29.205484069 +0200
++++ binutils-2.46.0/ld/emulparams/elf_x86_64.sh2026-06-06 21:15:10.310357913 +0200
+@@ -44,15 +44,3 @@
+       NATIVE=yes
+   esac
+ fi
+-
+-# Linux modifies the default library search path to first include a 64-bit
+-# specific directory.
+-case "$target" in
+-  x86_64*-linux*|i[3-7]86-*-linux-*)
+-    case "$EMULATION_NAME" in
+-      *64*)
+-LIBPATH_SUFFIX=64
+-;;
+-    esac
+-    ;;
+-esac
+

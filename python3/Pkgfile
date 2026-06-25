@@ -5,17 +5,14 @@
 # Depends on: bzip2 expat gdbm libffi libnsl libtirpc mpdecimal sqlite3 xz
 
 name=python3
-version=3.12.13
+version=3.15.0b2
 release=1
 source=(https://www.python.org/ftp/python/${version%rc*}/Python-$version.tar.xz)
 
 build() {
     cd Python-$version
 
-    autoconf
-    autoheader
     sed -i -e "s|-flto |-flto=4 |g" configure configure.ac
-    sed -i -e "s|^#.* /usr/local/bin/python|#!/usr/bin/python3|" Lib/cgi.py
     CFLAGS="${CFLAGS/-O2/-O3} -ffat-lto-objects"
     local _pgojobs=$(nproc)
     export PROFILE_TASK="-m test -j${_pgojobs} --pgo-extended -x test_gdb -u-network"
@@ -24,9 +21,19 @@ build() {
     local -x COLUMNS=80
     local -x PYTHONDONTWRITEBYTECODE=
 
-    # Remove tests
-    #rm -r Lib/{test,{ctypes,sqlite3,tkinter,unittest}/test}
-    #rm -r Lib/{{distutils,lib2to3}/tests,idlelib/idle_test}
+    autoconf
+    autoheader
+
+    cat > ignore_tests.txt << 'EOF'
+test.test_generators.SignalAndYieldFromTest.test_raise_and_yield_from
+test.test_sqlite3.test_cli.Completion.test_complete_columns
+test.test_sqlite3.test_cli.Completion.test_complete_functions
+test.test_sqlite3.test_cli.Completion.test_complete_no_input
+test.test_sqlite3.test_cli.Completion.test_complete_no_match
+test.test_sqlite3.test_cli.Completion.test_complete_schemata
+test.test_sqlite3.test_cli.Completion.test_complete_sql_keywords
+test.test_sqlite3.test_cli.Completion.test_complete_table_indexes_triggers_views
+EOF
 
     ./configure \
         --prefix=/usr \
@@ -42,7 +49,8 @@ build() {
         --with-system-libmpdec \
         --with-tzpath=/usr/share/zoneinfo \
         --build=riscv64-unknown-linux-gnu \
-        --without-ensurepip
+        --without-ensurepip \
+        PROFILE_TASK='-m test --pgo --ignorefile=ignore_tests.txt --timeout=$(TESTTIMEOUT)'
 
     make EXTRA_CFLAGS="$CFLAGS"
     make -j1 EXTRA_CFLAGS="$CFLAGS" DESTDIR=$PKG altinstall maninstall

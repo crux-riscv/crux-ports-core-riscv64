@@ -5,7 +5,7 @@
 # Depends on: libmpc zlib zstd
 
 name=gcc
-version=14.3.0
+version=16.1.0
 release=1
 source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.xz
     $name-nocheck-fixincludes.patch $name-4.7.3-multilib-dirs.patch
@@ -28,6 +28,7 @@ build() {
         --libexecdir=/usr/lib \
         --enable-languages=c,c++,lto \
         --enable-threads=posix \
+        --with-build-config=bootstrap-lto-lean \
         --enable-__cxa_atexit \
         --enable-clocale=gnu \
         --enable-shared \
@@ -40,11 +41,7 @@ build() {
         --with-pkgversion="CRUX-RISCV riscv64" \
         --with-system-zlib \
         --disable-nls
-    make -O STAGE1_CFLAGS="-O2" \
-        BOOT_CFLAGS="$CFLAGS" \
-        BOOT_LDFLAGS="$LDFLAGS" \
-        LDFLAGS_FOR_TARGET="$LDFLAGS" \
-        bootstrap
+    make -O bootstrap
     make -j1 DESTDIR=$PKG install
 
     install -d $PKG/lib

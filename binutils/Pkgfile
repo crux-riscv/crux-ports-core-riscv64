@@ -5,11 +5,15 @@
 # Depends on: flex zlib
 
 name=binutils
-version=2.43.1
+version=2.46.1
 release=1
-source=(https://ftpmirror.gnu.org/gnu/$name/$name-$version.tar.xz)
+source=(https://ftpmirror.gnu.org/gnu/$name/$name-$version.tar.xz
+    libdir.patch libsearchpath.patch)
 
 build() {
+    patch -Np1 -d $name-$version -i $SRC/libdir.patch
+    patch -Np1 -d $name-$version -i $SRC/libsearchpath.patch
+
     mkdir build
     cd build
 
@@ -24,6 +28,8 @@ build() {
         --enable-pgo-build=lto \
         --enable-plugins \
         --enable-install-libiberty \
+        --enable-default-hash-style=gnu \
+        --enable-new-dtags \
         --with-bugurl=https://crux.nu/bugs/ \
         --with-pic \
         --with-system-zlib \

@@ -1,0 +1,38 @@
+# Resolve $LIB linker search path token to the correct directory
+# for a multilib system that uses "lib/" for 64-bit,
+# and "lib32/" for 32-bit.
+
+diff -Nurp binutils-2.43.1.orig/ld/ld.1 binutils-2.43.1/ld/ld.1
+--- binutils-2.43.1.orig/ld/ld.12024-08-17 00:00:00.000000000 +0100
++++ binutils-2.43.1/ld/ld.12025-05-05 19:37:48.011230960 +0100
+@@ -2260,7 +2260,7 @@ colons, or by appearing multiple times.
+ The tokens \fR\f(CI$ORIGIN\fR\fI\fR and \fI\fR\f(CI$LIB\fR\fI\fR can appear in these search
+ directories.  They will be replaced by the full path to the directory
+ containing the program or shared object in the case of \fI\fR\f(CI$ORIGIN\fR\fI\fR
+-and either \fBlib\fR \- for 32\-bit binaries \- or \fBlib64\fR \- for
++and either \fBlib32\fR \- for 32\-bit binaries \- or \fBlib\fR \- for
+ 64\-bit binaries \- in the case of \fI\fR\f(CI$LIB\fR\fI\fR.
+ .Sp
+ The alternative form of these tokens \- \fI${ORIGIN}\fR and
+diff -Nurp binutils-2.43.1.orig/ld/ldelf.c binutils-2.43.1/ld/ldelf.c
+--- binutils-2.43.1.orig/ld/ldelf.c2024-08-17 00:00:00.000000000 +0100
++++ binutils-2.43.1/ld/ldelf.c2025-05-05 12:04:35.119011596 +0100
+@@ -543,13 +543,13 @@ ldelf_search_needed (const char *path, s
+     case 'L':
+       if (strcmp (v, "IB") == 0 || strcmp (v, "IB}") == 0)
+ {
+-  /* LIB - replace with "lib" in 32-bit environments
+-     and "lib64" in 64-bit environments.  */
++  /* LIB - replace with "lib32" in 32-bit environments
++     and "lib" in 64-bit environments.  */
+ 
+   switch (elfsize)
+     {
+-    case 32: replacement = "lib"; break;
+-    case 64: replacement = "lib64"; break;
++    case 32: replacement = "lib32"; break;
++    case 64: replacement = "lib"; break;
+     default:
+       abort ();
+     }
+
