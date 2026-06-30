@@ -5,17 +5,13 @@
 # Depends on: libmpc zlib zstd
 
 name=gcc
-version=14.3.0
+version=14.4.0
 release=1
 source=(https://sourceware.org/pub/gcc/releases/gcc-$version/$name-$version.tar.xz
-    $name-nocheck-fixincludes.patch $name-4.7.3-multilib-dirs.patch
-    fix-nested-generic-lambda.patch rejectnegative.patch)
+    $name-nocheck-fixincludes.patch) 
 
 build() {
     patch -d $name-$version -p1 -i $SRC/$name-nocheck-fixincludes.patch
-    #patch -d $name-$version -p1 -i $SRC/$name-4.7.3-multilib-dirs.patch
-    #patch -d $name-$version -p1 -i $SRC/fix-nested-generic-lambda.patch
-    #patch -d $name-$version -p1 -i $SRC/rejectnegative.patch
 
     # pipe fails tests
     CFLAGS=${CFLAGS/-pipe/}
@@ -26,20 +22,29 @@ build() {
     ../$name-$version/configure \
         --prefix=/usr \
         --libexecdir=/usr/lib \
-        --enable-languages=c,c++,lto \
         --enable-threads=posix \
+        --with-build-config=bootstrap-lto-lean \
+        --with-linker-hash-style=gnu \
+        --with-system-zlib \
+        --enable-languages=c,c++,lto \
+        --enable-stage1-languages=c,lto \
+        --enable-link-serialization=1 \
+        --enable-linker-build-id \
+        --enable-gnu-indirect-function \
         --enable-__cxa_atexit \
         --enable-clocale=gnu \
         --enable-shared \
         --enable-lto \
-        --with-x=no \
         --disable-multilib \
         --enable-plugin \
         --enable-default-pie \
         --enable-default-ssp \
+        --enable-host-pie \
         --with-pkgversion="CRUX-RISCV riscv64" \
-        --with-system-zlib \
+        --with-x=no \
+        --disable-fixincludes \
         --disable-nls
+
     make -O STAGE1_CFLAGS="-O2" \
         BOOT_CFLAGS="$CFLAGS" \
         BOOT_LDFLAGS="$LDFLAGS" \
