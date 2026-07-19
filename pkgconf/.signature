@@ -1,6 +1,6 @@
 untrusted comment: verify with /etc/ports/core-riscv64.pub
-RWSZ4iFjxPszOZox2MxaolfAYSd0QUzPZntuqOh3P3Jpyy4VFvNmoaXF7X5dsCNY9iKQsxUrb8rwYT1s7oTI2wJ5JWzbjZQ0wQw=
-SHA256 (Pkgfile) = 9f4495eadc79157f301ef89eeb9ae5c820086a47c94550063b80862194a03160
+RWSZ4iFjxPszOe5u0vHZKkxdwHZH7tjcbNu6Uz80PmbXLkqDT4fgEpX1MZ0BnhIJ7ZC6xJbD1ptykFJf/enftrKnIohi6zF8Qgg=
+SHA256 (Pkgfile) = c803a077276a5e5da8f91b2357287e2a4b5c0f44fdf7eaeee13a8932cd7ebb6d
 SHA256 (.footprint) = cd354349e6acae64e1cfe0d9be8636938e60c8c21b1eb76d8a6277bb19e14aef
-SHA256 (pkgconf-3.0.1.tar.xz) = 640b0d03a6d9e385d8bdcdac071a5cdf5fbd3f45942d454b711ae46271489b30
+SHA256 (pkgconf-3.0.3.tar.xz) = aa033abb2b777ba4e66635495a931e53c49d86e4e4e38af68c0f76d666cbd8cf
 SHA256 (riscv64-unknown-linux-gnu.personality) = bdcb5b5071233817290b2a3857ab4ab0a1be7b6cf9da74dfc2291756f3216d41
