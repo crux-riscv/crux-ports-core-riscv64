@@ -5,7 +5,7 @@
 # Depends on: bzip2 expat gdbm libffi libnsl libtirpc mpdecimal sqlite3 xz
 
 name=python3
-version=3.15.0b2
+version=3.15.0b4
 release=1
 source=(https://www.python.org/ftp/python/${version%rc*}/Python-$version.tar.xz)
 
@@ -32,7 +32,6 @@ test.test_sqlite3.test_cli.Completion.test_complete_no_input
 test.test_sqlite3.test_cli.Completion.test_complete_no_match
 test.test_sqlite3.test_cli.Completion.test_complete_schemata
 test.test_sqlite3.test_cli.Completion.test_complete_sql_keywords
-test.test_sqlite3.test_cli.Completion.test_complete_table_indexes_triggers_views
 EOF
 
     ./configure \
@@ -50,7 +49,7 @@ EOF
         --with-tzpath=/usr/share/zoneinfo \
         --build=riscv64-unknown-linux-gnu \
         --without-ensurepip \
-        PROFILE_TASK='-m test --pgo --ignorefile=ignore_tests.txt --timeout=$(TESTTIMEOUT)'
+        PROFILE_TASK='-m test --pgo --timeout=$(TESTTIMEOUT)'
 
     make EXTRA_CFLAGS="$CFLAGS"
     make -j1 EXTRA_CFLAGS="$CFLAGS" DESTDIR=$PKG altinstall maninstall
