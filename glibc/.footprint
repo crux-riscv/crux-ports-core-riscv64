@@ -172,6 +172,7 @@ drwxr-xr-x	root/root	usr/include/bits/
 -rw-r--r--	root/root	usr/include/bits/error-ldbl.h
 -rw-r--r--	root/root	usr/include/bits/error.h
 -rw-r--r--	root/root	usr/include/bits/eventfd.h
+-rw-r--r--	root/root	usr/include/bits/fcntl-linux-fortify.h
 -rw-r--r--	root/root	usr/include/bits/fcntl-linux.h
 -rw-r--r--	root/root	usr/include/bits/fcntl.h
 -rw-r--r--	root/root	usr/include/bits/fcntl2.h
@@ -220,6 +221,7 @@ drwxr-xr-x	root/root	usr/include/bits/
 -rw-r--r--	root/root	usr/include/bits/mqueue2.h
 -rw-r--r--	root/root	usr/include/bits/msq.h
 -rw-r--r--	root/root	usr/include/bits/netdb.h
+-rw-r--r--	root/root	usr/include/bits/openat2.h
 -rw-r--r--	root/root	usr/include/bits/param.h
 -rw-r--r--	root/root	usr/include/bits/poll.h
 -rw-r--r--	root/root	usr/include/bits/poll2.h
@@ -332,6 +334,7 @@ drwxr-xr-x	root/root	usr/include/bits/types/
 -rw-r--r--	root/root	usr/include/bits/types/idtype_t.h
 -rw-r--r--	root/root	usr/include/bits/types/locale_t.h
 -rw-r--r--	root/root	usr/include/bits/types/mbstate_t.h
+-rw-r--r--	root/root	usr/include/bits/types/once_flag.h
 -rw-r--r--	root/root	usr/include/bits/types/res_state.h
 -rw-r--r--	root/root	usr/include/bits/types/sig_atomic_t.h
 -rw-r--r--	root/root	usr/include/bits/types/sigevent_t.h
@@ -2259,6 +2262,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/en_NZ
 -rw-r--r--	root/root	usr/share/i18n/locales/en_PH
 -rw-r--r--	root/root	usr/share/i18n/locales/en_SC
+-rw-r--r--	root/root	usr/share/i18n/locales/en_SE
 -rw-r--r--	root/root	usr/share/i18n/locales/en_SG
 -rw-r--r--	root/root	usr/share/i18n/locales/en_US
 -rw-r--r--	root/root	usr/share/i18n/locales/en_ZA
@@ -2326,6 +2330,7 @@ drwxr-xr-x	root/root	usr/share/i18n/locales/
 -rw-r--r--	root/root	usr/share/i18n/locales/hif_FJ
 -rw-r--r--	root/root	usr/share/i18n/locales/hne_IN
 -rw-r--r--	root/root	usr/share/i18n/locales/hr_HR
+-rw-r--r--	root/root	usr/share/i18n/locales/hrx_BR
 -rw-r--r--	root/root	usr/share/i18n/locales/hsb_DE
 -rw-r--r--	root/root	usr/share/i18n/locales/ht_HT
 -rw-r--r--	root/root	usr/share/i18n/locales/hu_HU
