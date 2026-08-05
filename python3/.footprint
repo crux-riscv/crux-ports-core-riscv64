@@ -1939,7 +1939,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/ensurepip/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/ensurepip/__pycache__/_uninstall.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/ensurepip/__pycache__/_uninstall.cpython-315.pyc
 drwxr-xr-x	root/root	usr/lib/python3.15/ensurepip/_bundled/
--rw-r--r--	root/root	usr/lib/python3.15/ensurepip/_bundled/pip-26.1.2-py3-none-any.whl
+-rw-r--r--	root/root	usr/lib/python3.15/ensurepip/_bundled/pip-26.2-py3-none-any.whl
 -rw-r--r--	root/root	usr/lib/python3.15/ensurepip/_uninstall.py
 -rw-r--r--	root/root	usr/lib/python3.15/enum.py
 -rw-r--r--	root/root	usr/lib/python3.15/filecmp.py
@@ -3185,6 +3185,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_crossinterp_definitions.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_crossinterp_definitions.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_crossinterp_definitions.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_isolated_sample.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_isolated_sample.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_isolated_sample.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_test_atexit.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_test_atexit.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/_test_atexit.cpython-315.pyc
@@ -4507,6 +4510,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/__pycache__/xpickle_worker.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/_code_definitions.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/_crossinterp_definitions.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/_isolated_sample.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/_test_atexit.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/_test_eintr.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/_test_embed_structseq.py
@@ -5067,6 +5071,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/support/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/import_helper.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/import_helper.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/import_helper.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/isolation.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/isolation.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/isolation.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/logging_helper.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/logging_helper.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/logging_helper.cpython-315.pyc
@@ -5094,6 +5101,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/support/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/strace_helper.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/strace_helper.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/strace_helper.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/subprocess_runner.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/subprocess_runner.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/subprocess_runner.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/testcase.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/testcase.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/__pycache__/testcase.cpython-315.pyc
@@ -5129,6 +5139,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/support/_hypothesis_stubs/__pycache
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/hypothesis_helper.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/i18n_helper.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/import_helper.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/isolation.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/logging_helper.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/numbers.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/os_helper.py
@@ -5138,6 +5149,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/support/_hypothesis_stubs/__pycache
 -rwxr-xr-x	root/root	usr/lib/python3.15/test/support/smtpd.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/socket_helper.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/strace_helper.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/support/subprocess_runner.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/testcase.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/threading_helper.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/support/venv.py
@@ -5391,6 +5403,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_capi/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_bytes.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_bytes.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_bytes.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_capsule.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_capsule.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_capsule.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_codecs.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_codecs.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/__pycache__/test_codecs.cpython-315.pyc
@@ -5506,6 +5521,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_capi/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_abstract.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_bytearray.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_bytes.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_capsule.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_codecs.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_complex.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_capi/test_config.py
@@ -6238,6 +6254,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_func_annotations.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_func_annotations.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_func_annotations.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_functions.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_functions.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_functions.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_functools.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_functools.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_functools.cpython-315.pyc
@@ -6295,6 +6314,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_re.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_re.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_re.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_readline.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_readline.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_readline.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_resource.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_resource.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_resource.cpython-315.pyc
@@ -6357,6 +6379,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_exceptions.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_frame.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_func_annotations.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_functions.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_functools.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_gc.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_generators.py
@@ -6376,6 +6399,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_pwd.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_races.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_re.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_readline.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_resource.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_reversed.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_set.py
@@ -7262,6 +7286,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_json/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_pass3.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_pass3.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_pass3.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_pickleable.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_pickleable.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_pickleable.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_recursion.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_recursion.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/__pycache__/test_recursion.cpython-315.pyc
@@ -7292,6 +7319,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_json/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_pass1.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_pass2.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_pass3.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_pickleable.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_recursion.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_scanstring.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_json/test_separators.py
@@ -7395,6 +7423,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/lazy_with_from.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/lazy_with_from.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/lazy_with_from.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/missing_dependency.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/missing_dependency.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/missing_dependency.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/module_with_getattr.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/module_with_getattr.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/module_with_getattr.cpython-315.pyc
@@ -7416,6 +7447,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/relative_lazy_from.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/relative_lazy_from.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/relative_lazy_from.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/self_named_module_not_found.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/self_named_module_not_found.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/self_named_module_not_found.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/try_except_eager.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/try_except_eager.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/__pycache__/try_except_eager.cpython-315.pyc
@@ -7456,6 +7490,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/badsyntax/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazy_import_pkg.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazy_with.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazy_with_from.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/missing_dependency.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/module_with_getattr.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/modules_dict.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/modules_getattr.py
@@ -7481,6 +7516,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/pkg/__pycache
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/pkg/c.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/relative_lazy.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/relative_lazy_from.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/self_named_module_not_found.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/try_except_eager.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/try_except_eager_from.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_linecache.py
