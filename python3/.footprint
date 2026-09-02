@@ -1939,7 +1939,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/ensurepip/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/ensurepip/__pycache__/_uninstall.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/ensurepip/__pycache__/_uninstall.cpython-315.pyc
 drwxr-xr-x	root/root	usr/lib/python3.15/ensurepip/_bundled/
--rw-r--r--	root/root	usr/lib/python3.15/ensurepip/_bundled/pip-26.2-py3-none-any.whl
+-rw-r--r--	root/root	usr/lib/python3.15/ensurepip/_bundled/pip-26.2.1-py3-none-any.whl
 -rw-r--r--	root/root	usr/lib/python3.15/ensurepip/_uninstall.py
 -rw-r--r--	root/root	usr/lib/python3.15/enum.py
 -rw-r--r--	root/root	usr/lib/python3.15/filecmp.py
@@ -2415,9 +2415,6 @@ drwxr-xr-x	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/test_zzdummy.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/test_zzdummy.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/test_zzdummy.cpython-315.pyc
--rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/test_zzdummy_user.cpython-315.opt-1.pyc
--rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/test_zzdummy_user.cpython-315.opt-2.pyc
--rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/test_zzdummy_user.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/tkinter_testing_utils.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/tkinter_testing_utils.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/tkinter_testing_utils.cpython-315.pyc
@@ -2485,7 +2482,6 @@ drwxr-xr-x	root/root	usr/lib/python3.15/idlelib/idle_test/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/test_window.py
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/test_zoomheight.py
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/test_zzdummy.py
--rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/test_zzdummy_user.py
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/idle_test/tkinter_testing_utils.py
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/iomenu.py
 -rw-r--r--	root/root	usr/lib/python3.15/idlelib/macosx.py
@@ -6227,6 +6223,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_collections.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_collections.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_collections.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_context.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_context.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_context.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_cprofile.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_cprofile.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_cprofile.cpython-315.pyc
@@ -6329,6 +6328,9 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_slots.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_slots.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_slots.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_sqlite3.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_sqlite3.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_sqlite3.cpython-315.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_str.cpython-315.opt-1.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_str.cpython-315.opt-2.pyc
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/test_str.cpython-315.pyc
@@ -6370,6 +6372,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_capi.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_code.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_collections.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_context.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_cprofile.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_csv.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_dbm_gnu.py
@@ -6404,6 +6407,7 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/__pycache__/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_reversed.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_set.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_slots.py
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_sqlite3.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_str.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_free_threading/test_string_template_race.py
 -rwxr-xr-x	root/root	usr/lib/python3.15/test/test_free_threading/test_suggestions.py
@@ -7490,6 +7494,16 @@ drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/badsyntax/
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazy_import_pkg.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazy_with.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazy_with_from.py
+drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__init__.py
+drwxr-xr-x	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/__init__.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/__init__.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/__init__.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/bar.cpython-315.opt-1.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/bar.cpython-315.opt-2.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/__pycache__/bar.cpython-315.pyc
+-rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/lazypkg/bar.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/missing_dependency.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/module_with_getattr.py
 -rw-r--r--	root/root	usr/lib/python3.15/test/test_lazy_import/data/modules_dict.py
