@@ -4,11 +4,14 @@
 # Depends on: eudev file libcap-ng linux-pam sqlite3
 
 name=util-linux
-version=2.42.2
+version=2.42.3
 release=1
 source=(https://www.kernel.org/pub/linux/utils/$name/v${version:0:4}/$name-$version.tar.xz)
 
 build() {
+    sed -i '/#include "all-io.h"/a #include "fileutils.h"' \
+        $name-$version/libmount/src/hook_idmap.c
+
     meson setup $name-$version build \
         --prefix=/usr \
         --bindir=/usr/bin \
