@@ -1,5 +1,5 @@
 untrusted comment: verify with /etc/ports/core-riscv64.pub
-RWSZ4iFjxPszObycR+OKjnGl6W05xmDKJUw+/Ny3lAPi3nLlWoPS9W4/Zp2FYcwYU2wi5wjdX/VH1QtILVrSzex7RN1QRf1gFwQ=
-SHA256 (Pkgfile) = e480214c241875f9a77646f2b3940f077176812cbcef3518c0a8dad00615fa26
+RWSZ4iFjxPszOY4FLIsr+eq99wwsafk3Yx7mY5WzwOep6LepcFNgDwbX/bUtgsT4g9/bC3MULkRRiwTVJiFecMVTzN72OwisBQ0=
+SHA256 (Pkgfile) = 217a0519d21833578ae10291ec544950955bea5994f93a9af3b4bd33d3a526e0
 SHA256 (.footprint) = defb1bdb0a6829fc6d88570c4a2bad33fced18180d35347cbb765d159abdee3e
-SHA256 (flex-2.6.13.tar.gz) = a54de3a79dc191d9d9a3acd07b8981be160d1be588261ef7687ccfdaeb1190ed
+SHA256 (flex-2.6.15.tar.gz) = ba38801d12d38782e36f2ddd66c118aa9ed3cbed9849194c4e68d9894cd739d9
